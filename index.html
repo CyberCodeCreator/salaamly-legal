@@ -21,7 +21,18 @@
             margin: 0;
             padding: 0;
         }
-
+        
+/* Dark Mode Support for modern devices */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-text: #FFFFFF;
+                --secondary-text: #EBEBF5;
+                --background-color: #000000;
+                --card-background: #1C1C1E;
+                --divider-color: #38383A;
+            }
+        }
+        
         body {
             font-family: var(--font-stack);
             background-color: var(--bg-color);
