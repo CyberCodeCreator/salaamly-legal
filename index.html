@@ -3,210 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Salaamly</title>
+    <meta name="description" content="Privacy Policy for Salaamly application.">
+    <meta name="robots" content="noindex, nofollow"> <title>Privacy Policy | Salaamly</title>
     <style>
         :root {
             --primary-color: #2c3e50;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --container-bg: #ffffff;
-            --accent-color: #3498db;
-            --border-color: #e0e0e0;
+            --accent-color: #27ae60; /* Зеленый оттенок, подходящий названию Salaamly */
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-secondary: #666666;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            font-family: var(--font-family);
             background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Container */
         .container {
             max-width: 800px;
             margin: 40px auto;
+            background: var(--card-bg);
             padding: 40px;
-            background: var(--container-bg);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
+        /* Header & Lang Switcher */
         header {
-            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 30px;
             padding-bottom: 20px;
-            text-align: center;
-        }
-
-        h1 { color: var(--primary-color); margin-bottom: 10px; }
-        h2 { color: var(--primary-color); margin-top: 30px; border-left: 4px solid var(--accent-color); padding-left: 15px; }
-        
-        .last-updated {
-            font-style: italic;
-            color: #666;
-            font-size: 0.9em;
+            border-bottom: 1px solid #eee;
         }
 
         .lang-switch {
             display: flex;
-            justify-content: center;
             gap: 10px;
-            margin-bottom: 30px;
         }
 
         .lang-btn {
-            padding: 8px 16px;
-            border: 1px solid var(--accent-color);
-            background: transparent;
-            color: var(--accent-color);
-            cursor: pointer;
+            border: 1px solid #ddd;
+            background: none;
+            padding: 6px 12px;
             border-radius: 20px;
-            transition: 0.3s;
-            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
 
         .lang-btn.active {
-            background: var(--accent-color);
+            background-color: var(--accent-color);
             color: white;
+            border-color: var(--accent-color);
         }
 
-        section { display: none; }
-        section.active { display: block; }
+        .lang-btn:hover:not(.active) {
+            background-color: #f0f0f0;
+        }
 
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        /* Typography */
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-        a { color: var(--accent-color); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
 
+        p, li {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--primary-color);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .meta-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Footer */
         footer {
+            margin-top: 50px;
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.8em;
-            color: #888;
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
 
+        /* Mobile Adaptation */
         @media (max-width: 600px) {
-            .container { margin: 10px; padding: 20px; }
-            h1 { font-size: 1.5em; }
-        }
+            .container {
+                margin: 0;
+                border-radius: 0;
+                padding: 20px;
+                box-shadow: none;
+            }
+            
+            header {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 15px;
+            }
 
-        @media print {
-            .lang-switch { display: none; }
-            section { display: block !important; page-break-after: always; }
-            .container { box-shadow: none; border: none; }
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>Salaamly</h1>
-        <div class="lang-switch">
-            <button class="lang-btn active" onclick="setLanguage('en')">English</button>
-            <button class="lang-btn" onclick="setLanguage('ru')">Русский</button>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <div class="brand">Salaamly</div>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                <button class="lang-btn" onclick="setLanguage('ru')">Русский</button>
+            </div>
+        </header>
 
-    <main>
-        <section id="en" class="active">
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Effective Date: February 28, 2026</p>
+        <main id="content-en">
+            <h1>Privacy Policy for Salaamly</h1>
+            <span class="meta-date">Effective Date: February 28, 2026</span>
 
-            <h2>1. Introduction</h2>
-            <p>This Privacy Policy describes how the developer (individual) of the Salaamly mobile application ("we", "us", or "our") collects, uses, and protects information about users ("user", "you") when using our application.</p>
-            <p>We are committed to ensuring transparency in data processing in accordance with applicable laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+            <section>
+                <h2>1. Introduction</h2>
+                <p>This Privacy Policy describes how the developer (individual) of the Salaamly mobile application ("we", "us", or "our") collects, uses, and protects information about users ("user", "you") when using our application.</p>
+                <p>We are committed to ensuring transparency in data processing in accordance with applicable laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+            </section>
 
-            <h2>2. Information We Collect</h2>
-            <p>We collect only the data necessary to provide a high-quality educational service.</p>
-            <ul>
-                <li><strong>Personal Data:</strong> Name, username, and email address. Used for profile creation, synchronizing learning progress, and identification.</li>
-                <li><strong>Automatically Collected Data:</strong> Non-identifiable information about your device (model, OS version) and usage statistics via third-party analytics.</li>
-                <li><strong>Payment Information:</strong> Processed securely by Apple/Google. We do not have access to your credit card or bank details.</li>
-            </ul>
+            <section>
+                <h2>2. Information We Collect</h2>
+                <p>We collect only the data necessary to provide a high-quality educational service.</p>
+                <ul>
+                    <li><strong>Personal Data (Provided by You):</strong> Name, username, and email address. This data is used for profile creation, synchronizing your learning progress, and user identification.</li>
+                    <li><strong>Automatically Collected Data:</strong> Through third-party analytics, we may receive non-identifiable information about your device (model, OS version) and application usage statistics (lesson progress, session duration).</li>
+                    <li><strong>Payment Information:</strong> We use Apple and Google in-app purchases. We do not have access to your credit card or bank account details; all financial transactions are processed securely by the respective app stores.</li>
+                </ul>
+            </section>
 
-            <h2>3. Third-Party Services</h2>
-            <p>We use trusted third-party tools:</p>
-            <ul>
-                <li><strong>Authentication:</strong> Google Sign-In and Sign in with Apple.</li>
-                <li><strong>Analytics:</strong> Google Analytics for Firebase.</li>
-                <li><strong>App Stores:</strong> Apple App Store and Google Play Store.</li>
-            </ul>
+            <section>
+                <h2>3. Third-Party Services</h2>
+                <p>To ensure the functionality of the application, we use trusted third-party tools:</p>
+                <ul>
+                    <li><strong>Authentication:</strong> Google Sign-In and Sign in with Apple (we only receive your email and name).</li>
+                    <li><strong>Analytics:</strong> Google Analytics for Firebase (helps us understand which lessons are most popular and identify technical errors).</li>
+                    <li><strong>App Stores:</strong> Apple App Store and Google Play Store (for transaction processing).</li>
+                </ul>
+            </section>
 
-            <h2>4. Age Restrictions</h2>
-            <p>Salaamly is intended for adults and teenagers (13+). We do not knowingly collect data from children under 13. If discovered, such data will be immediately deleted.</p>
+            <section>
+                <h2>4. Age Restrictions</h2>
+                <p>The Salaamly application is intended for adults and teenagers. It is not intended for children under the age of 13 (or the minimum age required in your country to provide consent for data processing). We do not knowingly collect data from children. If we become aware that we have inadvertently collected data from a child under 13, we will take immediate steps to delete such information.</p>
+            </section>
 
-            <h2>5. User Rights (GDPR & CCPA)</h2>
-            <ul>
-                <li><strong>Access and Correction:</strong> Update info in your profile.</li>
-                <li><strong>Erasure:</strong> Delete account/data via app settings or email.</li>
-                <li><strong>Opt-out:</strong> We do not sell your personal data.</li>
-            </ul>
+            <section>
+                <h2>5. User Rights (GDPR & CCPA)</h2>
+                <p>Regardless of your location, we provide the following options:</p>
+                <ul>
+                    <li><strong>Right to Access and Correction:</strong> You can update your information within your profile.</li>
+                    <li><strong>Right to Erasure (Deletion):</strong> You can delete your account and all associated data at any time via the application settings or by contacting us via email.</li>
+                    <li><strong>Opt-out of Data Sale:</strong> We confirm that we do not sell your personal data to third parties.</li>
+                </ul>
+            </section>
 
-            <h2>6. Data Retention and Deletion</h2>
-            <p>Personal data is permanently deleted from our servers within 30 days of an account deletion request.</p>
+            <section>
+                <h2>6. Data Retention and Deletion</h2>
+                <p>If you choose to stop using Salaamly, you can use the "Delete Account" feature in the app settings. All your personal data (email, progress, name) will be permanently deleted from our servers within 30 days of the request.</p>
+            </section>
 
-            <h2>7. Changes</h2>
-            <p>We may update this policy periodically. Continued use of the app implies consent to changes.</p>
+            <section>
+                <h2>7. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We recommend that users periodically review this page for any changes. Your continued use of the Application after changes have been made to this Policy will be deemed as your consent to those changes.</p>
+            </section>
 
-            <h2>8. Contact Information</h2>
-            <p>Email: <a href="mailto:groupforkids@gmail.com">groupforkids@gmail.com</a></p>
-        </section>
+            <section>
+                <h2>8. Contact Information</h2>
+                <p>If you have any questions regarding privacy or data deletion, please contact us at:<br>
+                Email: <a href="mailto:groupforkids@gmail.com">groupforkids@gmail.com</a></p>
+            </section>
+        </main>
 
-        <section id="ru">
-            <h1>Политика конфиденциальности</h1>
-            <p class="last-updated">Дата обновления: 28 февраля 2026 г.</p>
+        <main id="content-ru" style="display: none;">
+            <h1>Политика конфиденциальности Salaamly</h1>
+            <span class="meta-date">Дата последнего обновления: 28 февраля 2026 г.</span>
 
-            <h2>1. Введение</h2>
-            <p>Настоящая Политика конфиденциальности описывает, как разработчик Salaamly собирает, использует и защищает информацию о пользователях.</p>
+            <section>
+                <h2>1. Введение</h2>
+                <p>Настоящая Политика конфиденциальности описывает, как разработчик (физическое лицо) приложения Salaamly («мы», «нас» или «наш») собирает, использует и защищает информацию о пользователях («пользователь», «вы») при использовании нашего мобильного приложения.</p>
+                <p>Мы стремимся обеспечить прозрачность обработки данных в соответствии с применимым законодательством, включая Общий регламент по защите данных (GDPR) и Закон о конфиденциальности потребителей штата Калифорния (CCPA).</p>
+            </section>
+
+            <section>
+                <h2>2. Собираемая информация</h2>
+                <p>Мы собираем только те данные, которые необходимы для предоставления качественного образовательного сервиса.</p>
+                <ul>
+                    <li><strong>Персональные данные (предоставляемые вами):</strong> Имя, имя пользователя (юзернейм) и адрес электронной почты. Эти данные используются для создания профиля, синхронизации прогресса обучения и идентификации пользователя.</li>
+                    <li><strong>Автоматически собираемые данные:</strong> Через сервис аналитики мы можем получать обезличенную информацию о вашем устройстве (модель, версия ОС) и статистику использования приложения (прогресс в уроках, время сессий).</li>
+                    <li><strong>Платежная информация:</strong> Мы используем встроенные покупки Apple и Google. Мы не имеем доступа к данным ваших банковских карт или счетов; вся финансовая информация обрабатывается магазинами приложений.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Сторонние сервисы</h2>
+                <p>Для обеспечения работы приложения мы используем проверенные сторонние инструменты:</p>
+                <ul>
+                    <li><strong>Авторизация:</strong> Google Sign-In и Sign in with Apple (мы получаем только ваш email и имя).</li>
+                    <li><strong>Аналитика:</strong> Google Analytics for Firebase (помогает нам понять, какие уроки наиболее популярны и где возникают ошибки).</li>
+                    <li><strong>Магазины приложений:</strong> Apple App Store и Google Play Store (обработка транзакций).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Возрастные ограничения</h2>
+                <p>Приложение Salaamly предназначено для взрослых и подростков. Оно не предназначено для детей младше 13 лет (или минимального возраста, установленного законодательством вашей страны для предоставления согласия на обработку данных). Мы намеренно не собираем данные детей. Если нам станет известно, что мы случайно собрали данные ребенка младше 13 лет, мы незамедлительно удалим эту информацию.</p>
+            </section>
+
+            <section>
+                <h2>5. Права пользователей (GDPR и CCPA)</h2>
+                <p>Независимо от места проживания, мы предоставляем вам следующие возможности:</p>
+                <ul>
+                    <li><strong>Право на доступ и исправление:</strong> Вы можете изменить свои данные в профиле.</li>
+                    <li><strong>Право на удаление:</strong> Вы можете в любой момент удалить свой аккаунт и все связанные с ним данные через настройки приложения или отправив запрос на наш email.</li>
+                    <li><strong>Отказ от продажи данных:</strong> Мы подтверждаем, что не продаем ваши персональные данные третьим лицам.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Удаление данных</h2>
+                <p>Если вы решите прекратить использование Salaamly, вы можете воспользоваться функцией удаления аккаунта в настройках приложения. Все ваши персональные данные (email, прогресс, имя) будут безвозвратно удалены с наших серверов в течение 30 дней с момента запроса.</p>
+            </section>
+
+            <section>
+                <h2>7. Изменения в Политике конфиденциальности</h2>
+                <p>Мы можем время от времени обновлять нашу Политику конфиденциальности. Мы рекомендуем пользователям периодически просматривать эту страницу на предмет изменений. Продолжение использования вами Приложения после внесения изменений в настоящую Политику будет расцениваться как ваше согласие с этими изменениями.</p>
+            </section>
+
+            <section>
+                <h2>8. Контактная информация</h2>
+                <p>По всем вопросам, связанным с конфиденциальностью или удалением данных, пожалуйста, пишите нам:<br>
+                Email: <a href="mailto:groupforkids@gmail.com">groupforkids@gmail.com</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Salaamly. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Скрываем все секции
+            document.getElementById('content-en').style.display = 'none';
+            document.getElementById('content-ru').style.display = 'none';
             
-            <h2>2. Собираемая информация</h2>
-            <ul>
-                <li><strong>Персональные данные:</strong> Имя, юзернейм и email для профиля и синхронизации.</li>
-                <li><strong>Автоматические данные:</strong> Обезличенная статистика использования через аналитику.</li>
-                <li><strong>Платежи:</strong> Обрабатываются Apple и Google. Мы не видим данные ваших карт.</li>
-            </ul>
+            // Показываем нужную
+            document.getElementById('content-' + lang).style.display = 'block';
 
-            <h2>3. Сторонние сервисы</h2>
-            <p>Google Sign-In, Sign in with Apple, Firebase Analytics, App Store/Google Play.</p>
+            // Обновляем состояние кнопок
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Находим нажатую кнопку по тексту (для простоты) или логике
+            // В данном случае просто ищем кнопку с нужным onclick
+            const activeBtn = document.querySelector(`.lang-btn[onclick="setLanguage('${lang}')"]`);
+            if (activeBtn) activeBtn.classList.add('active');
 
-            <h2>4. Возрастные ограничения</h2>
-            <p>Приложение для лиц от 13 лет. Мы не собираем данные детей намеренно.</p>
+            // Меняем атрибут lang у html для скринридеров
+            document.documentElement.lang = lang;
+        }
 
-            <h2>5. Права пользователей</h2>
-            <p>Вы имеете право на доступ, исправление и удаление ваших данных. Мы не продаем ваши данные.</p>
-
-            <h2>6. Удаление данных</h2>
-            <p>Данные удаляются безвозвратно в течение 30 дней после запроса на удаление аккаунта.</p>
-
-            <h2>7. Контакты</h2>
-            <p>Email: <a href="mailto:groupforkids@gmail.com">groupforkids@gmail.com</a></p>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2026 Salaamly. All rights reserved.
-    </footer>
-</div>
-
-<script>
-    function setLanguage(lang) {
-        // Toggle active section
-        document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-        document.getElementById(lang).classList.add('active');
-
-        // Toggle active button
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if(btn.innerText.toLowerCase().includes(lang === 'en' ? 'english' : 'русский')) {
-                btn.classList.add('active');
+        // Опционально: Определение языка браузера при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language || navigator.userLanguage; 
+            if (userLang.startsWith('ru')) {
+                setLanguage('ru');
+            } else {
+                setLanguage('en');
             }
         });
-    }
-</script>
-
+    </script>
 </body>
 </html>
