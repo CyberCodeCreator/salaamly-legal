@@ -7,6 +7,7 @@
     <style>
         /* --- Reset & Variables --- */
         :root {
+            color-scheme: light dark; /* Сообщаем браузеру о поддержке темной темы */
             --bg-color: #f4f6f8;
             --card-bg: #ffffff;
             --text-main: #1f2937;
@@ -22,14 +23,16 @@
             padding: 0;
         }
         
-/* Dark Mode Support for modern devices */
+        /* Dark Mode Support for modern devices */
         @media (prefers-color-scheme: dark) {
             :root {
-                --primary-text: #FFFFFF;
-                --secondary-text: #EBEBF5;
-                --background-color: #000000;
-                --card-background: #1C1C1E;
-                --divider-color: #38383A;
+                /* Приводим названия в соответствие со светлой темой */
+                --bg-color: #000000;
+                --card-bg: #1C1C1E;
+                --text-main: #FFFFFF;
+                --text-muted: #EBEBF5;
+                --border: #38383A;
+                --accent: #3b82f6; /* Немного осветлим синий для контраста на черном */
             }
         }
         
@@ -57,7 +60,7 @@
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #111;
+            color: var(--text-main); /* Заменили #111 */
         }
 
         h2 {
@@ -65,7 +68,7 @@
             font-weight: 600;
             margin-top: 24px;
             margin-bottom: 12px;
-            color: #111;
+            color: var(--text-main); /* Заменили #111 */
         }
 
         p {
@@ -96,7 +99,7 @@
         /* Stylize keys in lists (e.g. "Personal Data:") */
         .key-term {
             font-weight: 600;
-            color: #374151;
+            color: var(--text-main); /* Заменили #374151 */
         }
 
         /* --- Links --- */
@@ -132,7 +135,7 @@
 
         /* --- Print Styles --- */
         @media print {
-            body { background: white; }
+            body { background: white; color: black; }
             .container { box-shadow: none; padding: 0; margin: 0; }
         }
     </style>
