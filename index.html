@@ -3,50 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Salaamly</title>
+    <title>Privacy Policy | Salaamly</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #2980b9; margin-top: 30px; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+        :root {
+            --primary-color: #2c3e50;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --container-bg: #ffffff;
+            --accent-color: #3498db;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--container-bg);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 { color: var(--primary-color); margin-bottom: 10px; }
+        h2 { color: var(--primary-color); margin-top: 30px; border-left: 4px solid var(--accent-color); padding-left: 15px; }
+        
+        .last-updated {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid var(--accent-color);
+            background: transparent;
+            color: var(--accent-color);
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        section { display: none; }
+        section.active { display: block; }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 10px; padding: 20px; }
+            h1 { font-size: 1.5em; }
+        }
+
+        @media print {
+            .lang-switch { display: none; }
+            section { display: block !important; page-break-after: always; }
+            .container { box-shadow: none; border: none; }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Privacy Policy</h1>
-    <p>Last updated: February 28, 2026</p>
+<div class="container">
+    <header>
+        <h1>Salaamly</h1>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" onclick="setLanguage('ru')">Русский</button>
+        </div>
+    </header>
 
-    <p>This Privacy Policy describes how <strong>Salaamly</strong> ("we", "our", or "the App") handles your information. By using the App, you agree to the terms outlined here.</p>
+    <main>
+        <section id="en" class="active">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Effective Date: February 28, 2026</p>
 
-    <h2>1. Information We Access (Permissions)</h2>
-    <p>To provide its core functionality, the App requires access to:</p>
-    <ul>
-        <li><strong>Microphone (RECORD_AUDIO):</strong> We use this only to convert your speech into text. Audio data is processed in real-time and is <strong>not</strong> recorded, stored on our servers, or shared with third parties.</li>
-        <li><strong>Internet Access:</strong> Required for speech recognition processing and Firebase services.</li>
-    </ul>
+            <h2>1. Introduction</h2>
+            <p>This Privacy Policy describes how the developer (individual) of the Salaamly mobile application ("we", "us", or "our") collects, uses, and protects information about users ("user", "you") when using our application.</p>
+            <p>We are committed to ensuring transparency in data processing in accordance with applicable laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
 
-    <h2>2. Third-Party Services</h2>
-    <p>The App uses third-party services that may collect information used to identify you:</p>
-    <ul>
-        <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Analytics & Crashlytics</a></li>
-    </ul>
+            <h2>2. Information We Collect</h2>
+            <p>We collect only the data necessary to provide a high-quality educational service.</p>
+            <ul>
+                <li><strong>Personal Data:</strong> Name, username, and email address. Used for profile creation, synchronizing learning progress, and identification.</li>
+                <li><strong>Automatically Collected Data:</strong> Non-identifiable information about your device (model, OS version) and usage statistics via third-party analytics.</li>
+                <li><strong>Payment Information:</strong> Processed securely by Apple/Google. We do not have access to your credit card or bank details.</li>
+            </ul>
 
-    <h2>3. Data Retention</h2>
-    <p>We do not collect or store personal data on our own servers. Any data processed via Firebase (like crash reports) is handled according to Google's privacy standards.</p>
+            <h2>3. Third-Party Services</h2>
+            <p>We use trusted third-party tools:</p>
+            <ul>
+                <li><strong>Authentication:</strong> Google Sign-In and Sign in with Apple.</li>
+                <li><strong>Analytics:</strong> Google Analytics for Firebase.</li>
+                <li><strong>App Stores:</strong> Apple App Store and Google Play Store.</li>
+            </ul>
 
-    <h2>4. Children’s Privacy</h2>
-    <p>Our App does not knowingly collect personally identifiable information from children under 13. If you are a parent and aware that your child has provided us with personal data, please contact us.</p>
+            <h2>4. Age Restrictions</h2>
+            <p>Salaamly is intended for adults and teenagers (13+). We do not knowingly collect data from children under 13. If discovered, such data will be immediately deleted.</p>
 
-    <h2>5. Changes to This Policy</h2>
-    <p>We may update our Privacy Policy from time to time. We notify you of any changes by posting the new Privacy Policy on this page.</p>
+            <h2>5. User Rights (GDPR & CCPA)</h2>
+            <ul>
+                <li><strong>Access and Correction:</strong> Update info in your profile.</li>
+                <li><strong>Erasure:</strong> Delete account/data via app settings or email.</li>
+                <li><strong>Opt-out:</strong> We do not sell your personal data.</li>
+            </ul>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <strong>anvarhamidullin@example.com</strong></p>
+            <h2>6. Data Retention and Deletion</h2>
+            <p>Personal data is permanently deleted from our servers within 30 days of an account deletion request.</p>
 
-    <div class="footer">
-        <p>Disclaimer: This policy is for informational purposes. As an AI, I am not a lawyer, so you may want to review this with a legal professional if your app scales significantly.</p>
-    </div>
+            <h2>7. Changes</h2>
+            <p>We may update this policy periodically. Continued use of the app implies consent to changes.</p>
+
+            <h2>8. Contact Information</h2>
+            <p>Email: <a href="mailto:groupforkids@gmail.com">groupforkids@gmail.com</a></p>
+        </section>
+
+        <section id="ru">
+            <h1>Политика конфиденциальности</h1>
+            <p class="last-updated">Дата обновления: 28 февраля 2026 г.</p>
+
+            <h2>1. Введение</h2>
+            <p>Настоящая Политика конфиденциальности описывает, как разработчик Salaamly собирает, использует и защищает информацию о пользователях.</p>
+            
+            <h2>2. Собираемая информация</h2>
+            <ul>
+                <li><strong>Персональные данные:</strong> Имя, юзернейм и email для профиля и синхронизации.</li>
+                <li><strong>Автоматические данные:</strong> Обезличенная статистика использования через аналитику.</li>
+                <li><strong>Платежи:</strong> Обрабатываются Apple и Google. Мы не видим данные ваших карт.</li>
+            </ul>
+
+            <h2>3. Сторонние сервисы</h2>
+            <p>Google Sign-In, Sign in with Apple, Firebase Analytics, App Store/Google Play.</p>
+
+            <h2>4. Возрастные ограничения</h2>
+            <p>Приложение для лиц от 13 лет. Мы не собираем данные детей намеренно.</p>
+
+            <h2>5. Права пользователей</h2>
+            <p>Вы имеете право на доступ, исправление и удаление ваших данных. Мы не продаем ваши данные.</p>
+
+            <h2>6. Удаление данных</h2>
+            <p>Данные удаляются безвозвратно в течение 30 дней после запроса на удаление аккаунта.</p>
+
+            <h2>7. Контакты</h2>
+            <p>Email: <a href="mailto:groupforkids@gmail.com">groupforkids@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Salaamly. All rights reserved.
+    </footer>
+</div>
+
+<script>
+    function setLanguage(lang) {
+        // Toggle active section
+        document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+        document.getElementById(lang).classList.add('active');
+
+        // Toggle active button
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if(btn.innerText.toLowerCase().includes(lang === 'en' ? 'english' : 'русский')) {
+                btn.classList.add('active');
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
