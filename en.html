@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy for Salaamly</title>
+    <style>
+        /* --- Reset & Variables --- */
+        :root {
+            color-scheme: light dark;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --accent: #2563eb;
+            --border: #e5e7eb;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Dark Mode Support for modern devices */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #000000;
+                --card-bg: #1C1C1E;
+                --text-main: #FFFFFF;
+                --text-muted: #EBEBF5;
+                --border: #38383A;
+                --accent: #3b82f6;
+            }
+        }
+        
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 20px;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        /* --- Language Switcher --- */
+        .lang-switcher {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+
+        .lang-switcher a {
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .effective-date {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            font-style: italic;
+        }
+
+        /* --- Lists styling --- */
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .key-term {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* --- Links --- */
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Mobile Adaptability --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 24px 16px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* --- Print Styles --- */
+        @media print {
+            body { background: white; color: black; }
+            .container { box-shadow: none; padding: 0; margin: 0; }
+            .lang-switcher { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            Language: <a href="ru.html">Russian</a> | <b>English</b>
+        </div>
+
+        <article>
+            <h1>Privacy Policy for the Salaamly App</h1>
+            <div class="effective-date">Last Updated: May 6, 2026</div>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>This Privacy Policy describes how the developer (an individual) of the Salaamly application ("we," "us," or "our") collects, uses, stores, and protects the information of users ("user," "you") when using our mobile application. We are committed to ensuring maximum transparency in data processing in accordance with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+            </section>
+
+            <section>
+                <h2>2. Information We Collect and Purposes of Use</h2>
+                <p>We adhere to the principle of data minimization and collect only the information strictly necessary to provide a high-quality educational service and technical support.</p>
+                <ul>
+                    <li><span class="key-term">Personal Data (provided by you upon registration):</span> Name, username, and email address. This data is used to create a profile, identify the user, and synchronize learning progress across devices.</li>
+                    <li><span class="key-term">Customer Support Data (when contacting us):</span> If you contact our customer support via the app (for example, by sending us an email), we collect the information you voluntarily provide to us, including the text of your inquiry. To expedite the resolution of technical issues, the application automatically attaches the following technical information to your email:
+                        <ul>
+                            <li>Unique internal User ID or authorization status;</li>
+                            <li>Email address (or "Not specified" status for guests);</li>
+                            <li>Application interface language (Locale);</li>
+                            <li>Application version and build number;</li>
+                            <li>Device manufacturer and model;</li>
+                            <li>Operating system version.</li>
+                        </ul>
+                    </li>
+                    <li><span class="key-term">Purpose of collection:</span> This information is transmitted exclusively via your email client at your own initiative and is used by us solely for error diagnostics, processing your request, and providing technical assistance.</li>
+                    <li><span class="key-term">Automatically Collected Data (Analytics):</span> Through integration with analytical services, we collect anonymized information regarding the use of the application (lesson progress, session duration, crash reports).</li>
+                    <li><span class="key-term">Payment Information:</span> We use the In-App Purchases ecosystems of Apple and Google. We do not collect, process, or have access to your bank card or account data. All financial information is processed exclusively by the respective app stores (Apple App Store or Google Play Store).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Third-Party Services</h2>
+                <p>To ensure the stable operation of the application and user authorization, we use verified third-party services that process data in accordance with their own privacy policies:</p>
+                <ul>
+                    <li><span class="key-term">Authorization:</span> Google Sign-In and Sign in with Apple (we receive only your email and name provided by these services).</li>
+                    <li><span class="key-term">Analytics and Stability:</span> Google Analytics for Firebase (helps us analyze the popularity of educational materials and track technical failures).</li>
+                    <li><span class="key-term">App Stores:</span> Apple App Store and Google Play Store (for transaction processing and subscription management).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Age Limitations</h2>
+                <p>The Salaamly application is intended for adult users and teenagers. The service is not directed to children under the age of 13 (or any other minimum age established by the laws of your jurisdiction for independent consent to data processing). We do not knowingly collect personal data from children. If we become aware that we have inadvertently received personal data from a child under the permitted age, we will immediately delete this information from our servers.</p>
+            </section>
+
+            <section>
+                <h2>5. User Rights (GDPR and CCPA)</h2>
+                <p>Regardless of your country of residence, we provide you with full control over your data:</p>
+                <ul>
+                    <li><span class="key-term">Right to Access and Correction:</span> You can view and modify your personal data directly within the application's profile settings.</li>
+                    <li><span class="key-term">Right to Deletion (the "right to be forgotten"):</span> You can completely delete your account and all associated data at any time via the corresponding function in the application settings or by submitting a direct request to us.</li>
+                    <li><span class="key-term">Opt-out of Data Sale:</span> We guarantee and confirm that we do not and will never sell your personal data to third parties.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Data Storage and Deletion</h2>
+                <p>If you decide to stop using Salaamly, you can use the account deletion feature within the application. Upon initiating this process, all your personal data (email, name, learning progress, internal identifiers, as well as the history of customer support inquiries) will be permanently deleted from our active servers within 30 days from the date of the request.</p>
+            </section>
+
+            <section>
+                <h2>7. Changes to the Privacy Policy</h2>
+                <p>We reserve the right to update this Privacy Policy from time to time to reflect changes in legislation or application functionality. The date of the last update is always indicated at the top of the document. Your continued use of the Salaamly application after any changes have been made constitutes your acceptance of the revised Policy.</p>
+            </section>
+
+            <section>
+                <h2>8. Contact Information</h2>
+                <p>If you have any questions regarding this Privacy Policy, the processing of your data, or if you wish to exercise your data subject rights, please contact us: Email: <a href="mailto:groupforkids@gmail.com">groupforkids@gmail.com</a></p>
+            </section>
+        </article>
+
+    </main>
+
+</body>
+</html>
